@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Process</title>
+    
+    <style>
+
+        :root{
+            --c-dark: #1b1b16;
+            --c-darker: #292929;
+            --c-brand: #400001;
+            --c-brand-light: #FFA200;
+            --c-secondary-light: #F2C85B;
+            --c-brand-rgb: 78, 87, 212;
+            --c-body: #727272;
+            --c-white: #dbdbdb;
+            --c-grey: #dbd9d9f1 ;
+            --font-base: Helvetica, sans-serif;
+            --box-shadow: 0px 15px 25px rgba( 0, 0, 0, 0, 0.8);
+            --transition: all 0.5s ease;
+        }
+        body {
+            font-family: Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: var(--c-dark);
+            color: var(--c-white)
+        }
+        h1 {
+            color: var(--c-brand-light);
+            text-align: center;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .phase {
+            background-color: #11110e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 310px;
+            align-items: center; 
+            text-align: center;
+        }
+        .phase h2 {
+            color: var(--c-brand-light);
+        }
+        .phase p {
+            margin: 10px 0;
+        }
+        .card {
+        display: flex;
+            justify-content: space-between;
+        }
+        .highlight {
+            color: var(--c-grey);
+            font-weight: bold;
+        }
+        .container {
+            padding-left: 400px;
+            padding-right: 400px;
+        }
+        .apply-btn {
+            background-color: var(--c-brand-light); 
+            color: var(--c-dark);
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            
+        }
+        .apply-btn:hover{
+            background-color: var(--c-brand);
+            color: var(--c-secondary-light);
+            transform: scale(1.2);
+        }
+        .btn-section{
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>HOW DOES THE APPLICATION PROCESS WORK?</h1>
+        <div class="card">
+            <div class="phase">
+                <img src="./images/stage1.png"
+                style="width:100%; max-height:800px; object-fit:cover;">
+                <h2>APPLICATION PHASE</h2>
+                <p><span class="highlight"> February 10, 2025 - March 20, 2025</span></p>
+            </div>
+
+            <div class="phase">
+                <img src="./images/stage2.png"
+                style="width:100%; max-height:800px; object-fit:cover;">
+                <h2>EVALUATION PHASE</h2>
+                <p><span class="highlight">March 21-25, 2025</span></p>
+            </div>
+
+            <div class="phase">
+                <img src="./images/stage3.png"
+                style="width:100%; max-height:800px; object-fit:cover;">
+                <h2>FINAL SELECTION</h2>
+                <p><span class="highlight">March 26, 2025</span></p>
+            </div>
+        </div>
+            <h3>I, APPLICATION PHASE</h3>
+            <p>Esports Clubs from around the world are welcome to apply for the 2025 Club
+            Partner Program through the <span class="highlight">10th of February 2025 to 20th 
+                of March 2025</span>. The application takes about an hour to complete and asks 
+                for key information about their game statistics and general information.</p>
+            <h3>II. EVALUATION PHASE</h3>
+            <p>Applications will be reviewed by the APLK team in March 21-25, 2025. 
+                The evaluation process will be based on the information provided in the 
+                application form and the alignment of the applicant's vision with APLK’s mission 
+                and values.</p>
+            <h3>III. FINAL SELECTION</h3>
+            <p>Selected students will be notified in March 26, 2025. The selected students will also be announced on the APLK's website.</p>
+            <div class="btn-section">
+                <a href="#apply-btn">
+                    <button class="apply-btn">APPLY NOW</button>
+                </a>
+            </div>
+     </div>
+</body>
+</html>
