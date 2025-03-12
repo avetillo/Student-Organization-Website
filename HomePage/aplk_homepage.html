@@ -11,12 +11,17 @@
 
             }
 
+            body {
+                background: linear-gradient(90deg, #292929, #1e1e1e);
+            }
+
             header {
                 background-color: #400001;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 20px 300px;
+                box-shadow: 0px 8px 1px #000;
             }
 
             footer {
@@ -65,7 +70,7 @@
             }
 
             .logo img{
-                height: 50px;
+                height: 100px;
                 width: auto;
             }
 
@@ -86,25 +91,28 @@
 
             .news h1{
                 margin-bottom: 20px;
-                font-size: 30px;
+                font-size: 45px;
+                color: #f2c85b;
+                font-stretch: condensed;
+                letter-spacing: 2px;
+                text-shadow: 0px 0px 10px #a07f2a;
             }
 
             .news-cards {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 20px;
+                gap: 100px;
                 justify-content: space-between;
                 margin-bottom: 100px;
             }
             
             .news-cards .news-card {
                 width: 700px;
-                background: #1e1e1e;
+                background: linear-gradient(90deg, #400001, #2e0000);
                 color: #f2c85b;
                 border-radius: 10px;
                 overflow: hidden;
-                box-shadow: 0px 4px 8px #2A2929;
-
+                box-shadow: 0px 4px 8px #000;
             }
             
             .news-cards .news-card img{
@@ -136,21 +144,52 @@
 
             .upcoming-events h2{
                 margin-bottom: 20px;
-                font-size: 30px;
+                font-size: 45px;
+                color: #f2c85b;
+                font-stretch: condensed;
+                letter-spacing: 2px;
+                text-shadow: 0px 0px 10px #a07f2a;
             }
 
+            .upcoming-events button {
+                margin-top: 45px;
+                background: linear-gradient(90deg, #ba0001, #7c0000);
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .events {
+                background: linear-gradient(90deg, #400001, #2e0000);
+                padding: 40px 40px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                text-align: center;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0px 4px 8px #000;
+            }
+            
             .events-cards {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 15px;
+                gap: 20px;
                 justify-content: space-between;
             }
 
             .events-card {
                 width: 325px;
                 height: 200px;
-                background: #1e1e1e;
-                color: #f2c85b;
+                background: linear-gradient(90deg, #f2c85b, #d1a63a);
+                color: #443203;
                 border-radius: 10px;
                 overflow: hidden;
                 text-align: center;
@@ -189,23 +228,46 @@
                 flex-direction: column;
             }
 
-            .apply-now .se1 h3 {
-                margin: 0;
-                font-size: 48px;
+            .apply-now .se1 .text h3 {
+                font-size: 56px;
+                font-weight: 900;
+                color: #ffcc00;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-shadow: 0px 0px 10px #d1a63a;
             }
 
-            .apply-now .se1 p {
-                margin: 0;
-                font-size: 16px;
+            .apply-now .se1 .text h3 .university-label {
+                color: #ba0001;
+                text-shadow: 0px 0px 10px #400001;
+            }
+
+            .apply-now .se1 .text p {
+                font-size: 20px;
+                font-weight: bold;
+                color: #ffdb70;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-shadow: 0px 0px 8px #d1a63a;
             }
             
             .apply-now .se2 {
-                background-color:  #ffa200;
-                padding: 50px 50px 50px 0px;
+                background: linear-gradient(90deg, #ffcc00, #ffa200);
+                padding: 60px 50px;
+                text-align: center;
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+                box-shadow: 0px 4px 15px rgba(255, 136, 0, 0.6);
             }
 
             .apply-now .se2 h3 {
-                margin-left: 375px;
+                font-size: 48px;
+                font-weight: 900;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                text-shadow: 2px 2px 10px #2e0000;
+                margin-bottom: 20px;
             }
 
             .apply-now .se2 button {
@@ -252,7 +314,7 @@
     <body>
         <header>
             <div class = "logo">
-                <img src = "sample-logo.png">
+                <img src = "APLK.png">
             </div>
             <div class = "header-menu">
                 <button>ABOUT</button>
@@ -263,12 +325,12 @@
         </header>
         <main>
             <section class = "announcement-thumbnail">
-                <img src  = "sample-thumbnail.png">
+                <img src  = "home-thumbnail.png">
             </section>
             
             <section class = "news-and-events"> 
                 <div class = "news">
-                    <h1>Latest News</h1>
+                    <h1>LATEST NEWS</h1>
                     <div class = "news-cards">
                         <div class="news-card">
                             <img src="sample-news-thumbnail.png">
@@ -305,31 +367,35 @@
                     </div>
 
                 </div>
-                <div class = "upcoming-events">
-                    <h2>Upcoming Events</h2>
-                    <div class = "events-cards">
-                        <div class="events-card">
-                            <h3>APLK Valorant Grand Finals</h3>
-                            <p>We made it to the finals! Tune in to watch the team fight for the championship.</p>
-                            <p class="date">March 20, 2025 | 8 PM</p>
+                <section class = "events">
+                    <div class = "upcoming-events">
+                        <h2>UPCOMING EVENTS</h2>
+                        <div class = "events-cards">
+                            <div class="events-card">
+                                <h3>APLK Valorant Grand Finals</h3>
+                                <p>We made it to the finals! Tune in to watch the team fight for the championship.</p>
+                                <p class="date">March 20, 2025 | 8 PM</p>
+                            </div>
+                            <div class="events-card">
+                                <h3>Open Tryouts for New Players</h3>
+                                <p>Think you have what it takes? Join our open tryouts for League, Valorant, and more!</p>
+                                <p class="date">March 25-26, 2025 | 4 PM - 8 PM</p>
+                            </div>
+                            <div class="events-card">
+                                <h3>University-wide Local Tourney!</h3>
+                                <p>Calling all the best non-member student gamers in the university for this ultimate university-wide showdown!</p>
+                                <p class="date">April 2, 2025</p>
+                            </div>
+                            <div class="events-card">
+                                <h3>Monthly Update Stream /w Roster 2024!</h3>
+                                <p>Wanna catch up to our university's fiercest gamer warriors? Join us on this late-night stream. Ask them anything!</p>
+                                <p class="date">April 7, 2025 | 8 PM</p>
+                            </div>
                         </div>
-                        <div class="events-card">
-                            <h3>Open Tryouts for New Players</h3>
-                            <p>Think you have what it takes? Join our open tryouts for League, Valorant, and more!</p>
-                            <p class="date">March 25-26, 2025 | 4 PM - 8 PM</p>
-                        </div>
-                        <div class="events-card">
-                            <h3>University-wide Local Tourney!</h3>
-                            <p>Calling all the best non-member student gamers in the university for this ultimate university-wide showdown!</p>
-                            <p class="date">April 2, 2025</p>
-                        </div>
-                        <div class="events-card">
-                            <h3>Monthly Update Stream /w Roster 2024!</h3>
-                            <p>Wanna catch up to our university's fiercest gamer warriors? Join us on this late-night stream. Ask them anything!</p>
-                            <p class="date">April 7, 2025 | 8 PM</p>
-                        </div>
+                        <button>SEE MORE</button>
                     </div>
-                </div>
+                </section>
+                
             </section>
             
             <section class = "application">
@@ -338,7 +404,7 @@
                         <img src = "pup-logo.png">
                         <div class = "text">
                             <h3>
-                                PUP REPRESENT!
+                                <span class = "university-label">PUP</span> REPRESENT!
                             </h3>
                             <p>
                                 THE UNIVERSITY'S NO. 1 E-SPORTS TEAM
