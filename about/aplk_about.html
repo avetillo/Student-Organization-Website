@@ -7,108 +7,437 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #2A2929;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        nav {
+            width: 100%;
+            background: #540103; 
+            padding: 15px 20px;
+            color: #F2C85B;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            font-size: 13pt;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+            margin-left: 0;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #F2C85B;
+        }
+        
+        .nav-links li a:hover {
+            color: white;
+        }
+        
+        header {
+            width: 100%;
+            background: #400001;
+            color: #F2C85B;
+            text-align: center;
+        }
+        
+        main {
+            width: 100%;
+            background: #2A2929;
+            color: #F2C85B;
+            padding: 20px;
+        }
+        
+        footer {
+            width: 100%;
+            background: #400001;
+            color: #F2C85B;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        footer a {
+            font-size: 24px;
+            color: #F2C85B;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 10px;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+        
+        .about-section {
+            padding: 60px 0;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .about-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #FFA200;
+            position: relative;
+            padding-bottom: 15px;
+            text-shadow: 0 0 10px rgba(242, 200, 91, 0.5);
+        }
+        
+        .about-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, #540103, #F2C85B, #540103);
+        }
+        
+        .about-box {
+            background: linear-gradient(145deg, #753114, #8e0707);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+            border-left: 4px solid #f55637;
+            border-right: 4px solid #F2C85B;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #f55637, #F2C85B);
+        }
+        
+        .about-box h3 {
+            color: #FFA200;
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e22e0a;
+            padding-left: 15px;
+            text-shadow: 0 0 5px rgba(242, 200, 91, 0.3);
+        }
+        
+        .about-box p {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: #f0f0f0;
+        }
+        
+        .services-section {
+            padding: 60px 0;
+            background-color: #292827;
+            background-image: linear-gradient(to bottom, #323131, #292827);
+        }
+        
+        .services-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #FFA200;
+            position: relative;
+            padding-bottom: 15px;
+            text-shadow: 0 0 10px rgba(242, 200, 91, 0.5);
+        }
+
+        .services-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, #540103, #F2C85B, #540103);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-box {
+            background: linear-gradient(145deg, #4a0001, #6a0303);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            border: 2px solid #F2C85B;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            border-color: #F86E51;
+        }
+        
+        .service-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(248, 110, 81, 0.1), transparent 70%);
+            z-index: 0;
+        }
+        
+        .service-box h3 {
+            position: relative;
+            color: #F2C85B;
+            font-size: 22px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(242, 200, 91, 0.5);
+            z-index: 1;
+        }
+        
+        .service-box p {
+            position: relative;
+            font-size: 15px;
+            color: #ffffff;
+            z-index: 1;
+        }
+        
+        .hero-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(rgba(143, 50, 50, 0.315), rgba(27, 23, 23, 0.655)), url('background.gif') center/cover no-repeat;
+            background-size: cover;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+       
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+       
+        .hero-title {
+            margin-bottom: 20px;
+            color: #F2C85B;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+       
+        .hero-subtitle {
+            font-size: 35px;
+            font-style: italic;
+            color: #fc3f1a;
+            text-shadow: 2px 2px 4px rgba(20, 16, 16, 0.5);
+        }
+       
+        .hero-text {
+            font-size: 23px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #f2d1cc;
+            text-shadow: 2px 2px 4px rgba(20, 16, 16, 0.5);
+        }
+        
+        .apolaki-logo-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 5px;
+            filter: drop-shadow(0 0 10px rgba(242, 200, 91, 0.5));
+        }
+        
+        .hero-subtitle-main {
+            font-size: 70px;
+            font-style: italic;
+            margin-top: -40px;
+            color: #f0ca4a;
+            text-shadow: 2px 2px 4px rgba(207, 206, 206, 0.5);
+        }
+
+        
+        /* Pulsing animation for service boxes */
+        @keyframes pulse-border {
+            0% {
+                box-shadow: 0 0 0 0 rgba(242, 200, 91, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(242, 200, 91, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(242, 200, 91, 0);
+            }
+        }
+        
+        .service-box {
+            animation: pulse-border 2s infinite;
+        }
+        
+        /* Staggered animation for service boxes */
+        .service-box:nth-child(1) { animation-delay: 0s; }
+        .service-box:nth-child(2) { animation-delay: 0.4s; }
+        .service-box:nth-child(3) { animation-delay: 0.8s; }
+        .service-box:nth-child(4) { animation-delay: 1.2s; }
+        .service-box:nth-child(5) { animation-delay: 1.6s; }
+        .service-box:nth-child(6) { animation-delay: 2s; }
+    </style>
 </head>
-<body style="font-family: 'Roboto', sans-serif; background-color: #2A2929; color: #ffffff; margin: 0; padding: 0; line-height: 1.6;">
-    <header style="background-color: #670505; padding: 20px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                <h1 style="font-size: 32px; margin: 0; color: #F2C85B; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); font-family: 'Roboto', sans-serif;">APLK <span style="color: #F86E51;">(Apolaki)</span></h1>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Apolaki Logo" width="80" height="80">
             </div>
-            <nav>
-                <ul style="display: flex; justify-content: center; list-style: none; padding: 0; margin: 0;">
-                    <li style="margin: 0 15px;"><a href="#" style="color: #F2C85B; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; font-family: 'Roboto', sans-serif;">Home</a></li>
-                    <li style="margin: 0 15px;"><a href="#" style="color: #F2C85B; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; font-family: 'Roboto', sans-serif;">About Us</a></li>
-                    <li style="margin: 0 15px;"><a href="#" style="color: #F2C85B; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; font-family: 'Roboto', sans-serif;">Events</a></li>
-                    <li style="margin: 0 15px;"><a href="#" style="color: #F2C85B; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; font-family: 'Roboto', sans-serif;">Officers</a></li>
-                    <li style="margin: 0 15px;"><a href="#" style="color: #F2C85B; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; font-family: 'Roboto', sans-serif;">Games</a></li>
-                    <li style="margin: 0 15px;"><a href="#" style="color: #F2C85B; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 15px; letter-spacing: 1px; font-family: 'Roboto', sans-serif;">Contact</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fa-solid fa-house"></i> HOME</a></li>
+                <li><a href="#about"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
+                <li><a href="#events"><i class="fa-solid fa-calendar"></i> EVENTS </a></li>
+                <li><a href="#officers"><i class="fa-solid fa-users"></i> OFFICERS</a></li>
+                <li><a href="#games"><i class="fa-solid fa-gamepad"></i> GAMES</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-phone"></i> CONTACT </a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <section style="text-align: center; padding: 80px 0; background: linear-gradient(rgba(68, 67, 66, 0.473), rgba(68, 67, 66, 0.571)), url('background.gif') center/cover no-repeat; background-size: cover; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="font-size: 35px; margin-bottom: 20px; color: #F2C85B; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); font-family: 'Roboto', sans-serif;">APLK (Apolaki) Esports Club</h2>
-            <div style="font-size: 25px; font-style: italic; color: #F86E51; margin-bottom: 40px; font-family: 'Roboto', sans-serif;">Rule the Game, Command the Battlefield; Warriors of the Digital Arena</div>
-            <p style="font-size: 18px; max-width: 800px; margin: 0 auto 30px; color: #ffffff; font-family: 'Roboto', sans-serif;">Join our community of passionate gamers who push the boundaries of competition and excellence in the world of esports.</p>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-title">
+                <img src="apolaki.png" alt="APOLAKI" class="apolaki-logo-img">
+            </div>
+            <h3 class="hero-subtitle-main">Esports Club</h3>
+            <div class="hero-subtitle">Rule the Game, Command the Battlefield; Warriors of the Digital Arena</div>
+            <p class="hero-text">Join our community of passionate gamers who push the boundaries of competition and excellence in the world of esports.</p>
         </div>
     </section>
 
-    <section style="padding: 60px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="text-align: center; font-size: 35px; margin-bottom: 40px; color: #F2C85B; position: relative; padding-bottom: 15px; font-family: 'Roboto', sans-serif;">About Us</h2>
-            <div style="display: flex; flex-direction: column; gap: 40px;">
-                <div style="background-color: #333231; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
-                    <h3 style="color: #F2C85B; font-size: 20px; margin-bottom: 20px; border-left: 4px solid #F86E51; padding-left: 15px; font-family: 'Roboto', sans-serif;">What is APLK (Apolaki)?</h3>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">APLK stands for Apolaki, named after the powerful Filipino deity of war and the sun. In Philippine mythology, Apolaki is known as the patron of warriors and a symbol of strength, courage, and strategic brilliance.</p>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Just as Apolaki commands the battlefield in mythology, our esports club aims to dominate the digital arena through skill, teamwork, and strategic excellence. We embody the warrior spirit in every game we play and every competition we enter.</p>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Founded in 2025, APLK is more than just a gaming club – we are a community of dedicated students united by our passion for competitive gaming and esports culture. Our organization provides a platform for gamers to develop their skills, build meaningful connections, and represent our school in local and national tournaments.</p>
-                </div>
-                <div style="background-color: #333231; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
-                    <h3 style="color: #F2C85B; font-size: 20px; margin-bottom: 20px; border-left: 4px solid #F86E51; padding-left: 15px; font-family: 'Roboto', sans-serif;">Our Mission</h3>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">At APLK, our mission is to foster a vibrant and inclusive gaming community that promotes sportsmanship, skill development, and camaraderie among student gamers. We aim to:</p>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">• Provide opportunities for students to showcase their gaming talents in competitive environments</p>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">• Create a supportive space where gamers can connect, learn, and grow together</p>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">• Organize tournaments and events that elevate the esports scene within our campus and beyond</p>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">• Promote responsible gaming practices and maintain a healthy balance between academics and gaming</p>
-                </div>
-                <div style="background-color: #333231; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
-                    <h3 style="color: #F2C85B; font-size: 20px; margin-bottom: 20px; border-left: 4px solid #F86E51; padding-left: 15px; font-family: 'Roboto', sans-serif;">Our Vision</h3>
-                    <p style="font-size: 15px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">We envision APLK becoming a recognized powerhouse in collegiate esports, known for developing top-tier talent, hosting premier gaming events, and creating an inclusive community where every member can thrive. We strive to break stereotypes surrounding gaming and establish esports as a legitimate and respected activity within our academic institution.</p>
-                </div>
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h2 class="about-title">About Us</h2>
+            <div class="about-box">
+                <h3>What is APLK (Apolaki)?</h3>
+                <p>APLK stands for Apolaki, named after the powerful Filipino deity of war and the sun. In Philippine mythology, Apolaki is known as the patron of warriors and a symbol of strength, courage, and strategic brilliance.</p>
+                <p>Just as Apolaki commands the battlefield in mythology, our esports club aims to dominate the digital arena through skill, teamwork, and strategic excellence. We embody the warrior spirit in every game we play and every competition we enter.</p>
+                <p>Founded in 2025, APLK is more than just a gaming club – we are a community of dedicated students united by our passion for competitive gaming and esports culture. Our organization provides a platform for gamers to develop their skills, build meaningful connections, and represent our school in local and national tournaments.</p>
             </div>
-        </div>
-    </section>
-
-    <section style="padding: 60px 0; background-color: #323131;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="text-align: center; font-size: 35px; margin-bottom: 40px; color: #F2C85B; font-family: 'Roboto', sans-serif;">What We Offer</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div style="background-color: #444342; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); border: 1px solid #F2C85B;">
-                    <h3 style="color: #F86E51; font-size: 20px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Competitive Teams</h3>
-                    <p style="font-size: 15px; font-family: 'Roboto', sans-serif;">Join our competitive rosters in popular titles like League of Legends, Valorant, Dota 2, and more. Represent our school in tournaments and climb the ranks together.</p>
-                </div>
-                <div style="background-color: #444342; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); border: 1px solid #F2C85B;">
-                    <h3 style="color: #F86E51; font-size: 20px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Regular Training</h3>
-                    <p style="font-size: 15px; font-family: 'Roboto', sans-serif;">Participate in scheduled practice sessions, strategy meetings, and gameplay reviews led by experienced players and coaches.</p>
-                </div>
-                <div style="background-color: #444342; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); border: 1px solid #F2C85B;">
-                    <h3 style="color: #F86E51; font-size: 20px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Community Events</h3>
-                    <p style="font-size: 15px; font-family: 'Roboto', sans-serif;">Enjoy casual gaming nights, watch parties for major esports tournaments, and social gatherings to connect with fellow gamers.</p>
-                </div>
-                <div style="background-color: #444342; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); border: 1px solid #F2C85B;">
-                    <h3 style="color: #F86E51; font-size: 20px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Skill Development</h3>
-                    <p style="font-size: 15px; font-family: 'Roboto', sans-serif;">Improve your gaming skills through workshops, mentoring programs, and feedback sessions with more experienced players.</p>
-                </div>
-                <div style="background-color: #444342; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); border: 1px solid #F2C85B;">
-                    <h3 style="color: #F86E51; font-size: 20px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Tournament Hosting</h3>
-                    <p style="font-size: 15px; font-family: 'Roboto', sans-serif;">Experience the thrill of competition in our campus-wide tournaments across various game titles throughout the academic year.</p>
-                </div>
-                <div style="background-color: #444342; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); border: 1px solid #F2C85B;">
-                    <h3 style="color: #F86E51; font-size: 20px; margin-bottom: 15px; font-family: 'Roboto', sans-serif;">Networking Opportunities</h3>
-                    <p style="font-size: 15px; font-family: 'Roboto', sans-serif;">Connect with alumni, industry professionals, and esports organizations through special events and guest speaker sessions.</p>
-                </div>
+            <div class="about-box">
+                <h3>Our Mission</h3>
+                <p>At APLK, our mission is to foster a vibrant and inclusive gaming community that promotes sportsmanship, skill development, and camaraderie among student gamers. We aim to:</p>
+                <p>• Provide opportunities for students to showcase their gaming talents in competitive environments</p>
+                <p>• Create a supportive space where gamers can connect, learn, and grow together</p>
+                <p>• Organize tournaments and events that elevate the esports scene within our campus and beyond</p>
+                <p>• Promote responsible gaming practices and maintain a healthy balance between academics and gaming</p>
+            </div>
+            <div class="about-box">
+                <h3>Our Vision</h3>
+                <p>We envision APLK becoming a recognized powerhouse in collegiate esports, known for developing top-tier talent, hosting premier gaming events, and creating an inclusive community where every member can thrive. We strive to break stereotypes surrounding gaming and establish esports as a legitimate and respected activity within our academic institution.</p>
             </div>
         </div>
     </section>
 
-    <footer style="background-color: #670505; padding: 40px 0; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <div style="display: flex; flex-direction: column; align-items: center;">
-                <div style="font-size: 24px; color: #F2C85B; margin-bottom: 20px; font-weight: bold; font-family: 'Roboto', sans-serif;">APLK (Apolaki)</div>
-                
+    <section class="services-section">
+        <div class="about-container">
+            <h2 class="services-title">What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>Competitive Teams</h3>
+                    <p>Join our competitive rosters in popular games such as Tekken, Valorant, Call of Duty, and League of Legends.Represent our school in tournaments and climb the ranks together.</p>
                 </div>
-                <div style="margin-bottom: 20px;">
-                    <a href="#" style="color: #F2C85B; margin: 0 10px; text-decoration: none; font-size: 15px; font-family: 'Roboto', sans-serif;">FB</a>
-                    <a href="#" style="color: #F2C85B; margin: 0 10px; text-decoration: none; font-size: 15px; font-family: 'Roboto', sans-serif;">IG</a>
-                    <a href="#" style="color: #F2C85B; margin: 0 10px; text-decoration: none; font-size: 15px; font-family: 'Roboto', sans-serif;">TW</a>
-                    <a href="#" style="color: #F2C85B; margin: 0 10px; text-decoration: none; font-size: 15px; font-family: 'Roboto', sans-serif;">DC</a>
+                <div class="service-box">
+                    <h3>Regular Training</h3>
+                    <p>Participate in scheduled practice sessions, strategy meetings, and gameplay reviews led by experienced players and coaches.</p>
                 </div>
-                <div style="font-size: 15px; color: #aaa; font-family: 'Roboto', sans-serif;">
-                    &copy; 2025 APLK (Apolaki) Esports Club. All rights reserved.
+                <div class="service-box">
+                    <h3>Community Events</h3>
+                    <p>Enjoy casual gaming nights, watch parties for major esports tournaments, and social gatherings to connect with fellow gamers.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Skill Development</h3>
+                    <p>Improve your gaming skills through workshops, mentoring programs, and feedback sessions with more experienced players.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Tournament Hosting</h3>
+                    <p>Experience the thrill of competition in our campus-wide tournaments across various game titles throughout the academic year.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Networking Opportunities</h3>
+                    <p>Connect with alumni, industry professionals, and esports organizations through special events and guest speaker sessions.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>CONTACT US</h2>
+        <br>
+        <p>
+            <a href="mailto:" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </p>
+        <br>
+        <br>
+        <div style="font-size: 15px; color: #F2C85B; font-family: 'Roboto', sans-serif; font-style: italic;">
+            &copy; 2025 APLK (Apolaki) Esports Club. All rights reserved.
         </div>
     </footer>
 </body>
