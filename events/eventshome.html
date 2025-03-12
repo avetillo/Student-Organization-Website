@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page</title>
+    <style>
+        :root{
+            --c-dark: #1b1b16;
+            --c-darker: #11110e;
+            --c-brand: #400001;
+            --c-brand-light: #FFA200;
+            --c-secondary-light: #F2C85B;
+            --c-brand-rgb: 78, 87, 212;
+            --c-body: #727272;
+            --c-white: #dbdbdb;
+            --c-grey: #dbd9d9f1 ;
+            --font-base: Helvetica, sans-serif;
+            --box-shadow: 0px 15px 25px rgba( 0, 0, 0, 0, 0.8);
+            --transition: all 0.5s ease;
+        }
+        html {
+        scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1b1b16;
+            color: #dbdbdb;
+        }
+
+        h1 {
+            color: #FFA200;
+            text-align: center;
+        }
+
+        h2 {
+            color: #FFA200;
+            border-bottom: 2px solid #FFA200;
+            padding-bottom: 10px;
+        }
+
+        .phase {
+            background-color: var(--c-darker);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 310px;
+            align-items: center; 
+            text-align: center;
+        }
+        .phase:hover{
+            background-color: var(--c-brand);
+            transform: scale(1.05);
+        }
+
+        .phase h3 {
+            color: #666;
+        }
+
+        .phase p {
+            margin: 10px 0;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .highlight {
+            color: #dbdbdb;
+            font-weight: bold;
+        }
+
+        .container {
+            padding-left: 400px;
+            padding-right: 400px;
+        }
+
+        .event {
+            background-color: #292929;
+            border: none;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 310px;
+        }
+
+        .event h2 {
+            color: var(--c-secondary-light);
+            margin-top: 0;
+            text-align:  center;
+        }
+
+        .event p {
+            color:var(--c-white);
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .events {
+            display: flex;
+            justify-content: space-between;
+            border: none;
+        }
+    
+
+        .btn-phase {
+            background-color: #292929;
+            color: var(--c-brand-light);
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-phase:hover{
+            background-color: var(--c-brand-light); 
+            color: var(--c-dark);
+            transform: scale(1.05);
+        }
+        
+        
+    </style>
+
+    
+</head>
+
+
+
+<body>
+    <div class="container">
+        <h1>EVENTS</h1>
+        <div class="card">
+            <div class="phase">
+                <img src="./images/appl.png"
+                style="width:100%; max-height:800px; object-fit:cover;">
+                <h2 style="text-align: center;">APPLICATIONS</h2>
+                <p style="text-align: center;"><span class="highlight">10.2.2025 - 20.3.2025</span></p>
+                <button class="btn-phase"  onclick="window.location.href='application.html';">LEARN MORE</button>
+            </div>
+
+            <div class="phase">
+                <img src="./images/ACTIVITIES.png"
+                style="width:100%; max-height:800px; object-fit:cover;">
+                <h2>PLANNED ACTIVITIES</h2>
+                <p><span class="highlight">January 2025</span></p>
+                <a href="#events-section">
+                    <button class="btn-phase">LEARN MORE</button>
+                </a>
+            </div>
+            
+
+            <div class="phase">
+                <img src="./images/tournaments.png"
+                style="width:100%; max-height:800px; object-fit:cover;">
+                <h2 >TOURNAMENTS</h2>
+                <p ><span class="highlight">February 2025</span></p>
+                <button class="btn-phase" onclick="window.location.href='tournaments.html';" >SEE MORE</button>
+            </div>
+        </div>
+        <h1>DISCOVER WHAT'S ON</h1>
+        <p style="text-align: center;">Experience it all at APLK - Discover your perfect spot to play, watch or eat. At APLK, there is something for
+            everyone to enjoy!</p>
+        <div class="events" id="events-section">
+            <div class="event">
+                <img src="./images/n1.png" alt=""
+                style="width:100%; max-height:300px; object-fit:cover;  ">
+                <h2>APLK x Call of Duty: Community Scrims</h2>
+                <p>Join APLK's Call of Duty community scrims! Whether you're a beginner or a seasoned player, this is your chance to showcase your skills, meet fellow gamers, and improve your gameplay. Open to all APLK members and friends. Let's dominate the battlefield together!</p>
+                <p><strong>Date:</strong> March 15, 2025</p>
+                <p><strong>Time:</strong> 6:00 PM - 10:00 PM</p>
+                <p><strong>Platform:</strong> Cellphone</p>
+            </div>
+            
+            <div class="event">
+                <img src="./images/n2.png" alt=""
+                style="width:100%; max-height:300px; object-fit:cover;">
+                <h2>Tekken 8 Mentorship Program</h2>
+                <p>APLK is launching a Tekken 8 mentorship program! Learn from the best players in the community, improve your combos, and master advanced techniques. Whether you're new to Tekken or looking to refine your skills, this program is for you. Sign up now and level up your game!</p>
+                <p><strong>Registration Deadline:</strong> March 10, 2025</p>
+                <p><strong>Program Starts:</strong> March 20, 2025</p>
+            </div>
+            
+            <div class="event">
+                <img src="./images/n3.png" alt=""
+                style="width:100%; max-height:300px; object-fit:cover;">
+                <h2>Valorant Practice Sessions</h2>
+                <p>Calling all Valorant enthusiasts! APLK is hosting weekly practice sessions to help you sharpen your aim, teamwork, and strategy. Whether you're preparing for a tournament or just want to have fun, these sessions are perfect for you. Don't miss out!</p>
+                <p><strong>Every Saturday</strong></p>
+                <p><strong>Time:</strong> 3:00 PM - 7:00 PM</p>
+                <p><strong>Platform:</strong> PC</p>
+            </div>
+        </div>
+        <div class="events">
+            <div class="event">
+                <img src="./images/n4.png" alt=""
+                style="width:100%; max-height:300px; object-fit:cover;">
+                <h2>APLK Esports Bootcamp</h2>
+                <p>Join APLK's Esports Bootcamp! This intensive program covers everything from game mechanics to mental preparation. Open to players of Call of Duty, Tekken, and Valorant. Learn from experienced coaches, participate in scrims, and prepare for competitive play. Limited slots available!</p>
+                <p><strong>Bootcamp Dates:</strong> April 1-5, 2025</p>
+                <p><strong>Location:</strong> APLK Esports Hub, Manila</p>
+            </div>
+            
+            <div class="event">
+                <img src="./images/n5.png" alt=""
+                style="width:100%; max-height:300px; object-fit:cover;">
+                <h2>APLK Valorant Tournament</h2>
+                <p>Compete in APLK's Valorant Tournament and win exciting prizes! Gather your team and showcase your skills in this thrilling competition. Open to all APLK members and friends. Register now and prove you're the best!</p>
+                <p><strong>Tournament Date:</strong> May 10, 2025</p>
+                <p><strong>Registration Deadline:</strong> May 1, 2025</p>
+            </div>
+            
+            <div class="event">
+                <img src="./images/n6.png" alt=""
+                style="width:100%; max-height:300px; object-fit:cover;">
+                <h2>Tekken Community Night</h2>
+                <p>APLK is hosting a Tekken Community Night! Bring your controllers, meet fellow Tekken players, and enjoy friendly matches. Whether you're a casual player or a competitive fighter, this event is for you. Let's make it a night to remember!</p>
+                <p><strong>Date:</strong> April 25, 2025</p>
+                <p><strong>Time:</strong> 5:00 PM - 9:00 PM</p>
+                <p><strong>Location:</strong> APLK Gaming Lounge</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
