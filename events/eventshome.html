@@ -18,7 +18,7 @@
             --c-body: #727272;
             --c-white: #dbdbdb;
             --c-grey: #dbd9d9f1 ;
-            --font-base: Helvetica, sans-serif;
+            --font-base: Roboto, sans-serif;
             --box-shadow: 0px 15px 25px rgba( 0, 0, 0, 0, 0.8);
             --transition: all 0.5s ease;
         }
@@ -31,6 +31,8 @@
             font-family: Arial, sans-serif;
             background-color: #1b1b16;
             color: #dbdbdb;
+            margin: 0;
+
         }
 
         h1 {
@@ -78,6 +80,10 @@
         }
 
         .container {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+        section {
             padding-left: 150px;
             padding-right: 150px;
         }
@@ -217,7 +223,6 @@
         }
         
     </style>
-
     
 </head>
 
@@ -229,109 +234,111 @@
                 <img src="./images/logo1.png" alt="Apolaki Logo" width="80" height="80">
             </div>
             <ul class="nav-links">
-                <li><a href="#home"><i class="fa-solid fa-house"></i> HOME</a></li>
-                <li><a href="#about"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
-                <li><a href="#events"><i class="fa-solid fa-calendar"></i> EVENTS </a></li>
-                <li><a href="#officers"><i class="fa-solid fa-users"></i> OFFICERS</a></li>
+                <li><a href="/homepage/aplk_homepage.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+                <li><a href="/about/aplk_about.html"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
+                <li><a href="/events/eventshome.html"><i class="fa-solid fa-calendar"></i> EVENTS </a></li>
+                <li><a href="/officers/aplk_officers.html"><i class="fa-solid fa-users"></i> OFFICERS</a></li>
                 <li><a href="#games"><i class="fa-solid fa-gamepad"></i> GAMES</a></li>
                 <li><a href="#contact"><i class="fa-solid fa-phone"></i> CONTACT </a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <h1>EVENTS</h1>
-        <div class="card">
-            <div class="phase">
-                <img src="./images/appl.png"
-                style="width:100%; max-height:800px; object-fit:cover;">
-                <h2 style="text-align: center;">APPLICATIONS</h2>
-                <p style="text-align: center;"><span class="highlight">10.2.2025 - 20.3.2025</span></p>
-                <button class="btn-phase"  onclick="window.location.href='application.html';">LEARN MORE</button>
+    <main>
+        <section>
+            <h1>EVENTS</h1>
+            <div class="card">
+                <div class="phase">
+                    <img src="./images/appl.png"
+                    style="width:100%; max-height:800px; object-fit:cover;">
+                    <h2 style="text-align: center;">APPLICATIONS</h2>
+                    <p style="text-align: center;"><span class="highlight">10.2.2025 - 20.3.2025</span></p>
+                    <button class="btn-phase"  onclick="window.location.href='application.html';">LEARN MORE</button>
+                </div>
+                <div class="phase">
+                    <img src="./images/ACTIVITIES.png"
+                    style="width:100%; max-height:800px; object-fit:cover;">
+                    <h2>PLANNED ACTIVITIES</h2>
+                    <p><span class="highlight">January 2025</span></p>
+                    <a href="#events-section">
+                        <button class="btn-phase">LEARN MORE</button>
+                    </a>
+                </div>
+                
+                <div class="phase">
+                    <img src="./images/tournaments.png"
+                    style="width:100%; max-height:800px; object-fit:cover;">
+                    <h2 >TOURNAMENTS</h2>
+                    <p ><span class="highlight">2024 - 2025</span></p>
+                    <button class="btn-phase" onclick="window.location.href='tournaments.html';" >SEE MORE</button>
+                </div>
             </div>
 
-            <div class="phase">
-                <img src="./images/ACTIVITIES.png"
-                style="width:100%; max-height:800px; object-fit:cover;">
-                <h2>PLANNED ACTIVITIES</h2>
-                <p><span class="highlight">January 2025</span></p>
-                <a href="#events-section">
-                    <button class="btn-phase">LEARN MORE</button>
-                </a>
-            </div>
-            
 
-            <div class="phase">
-                <img src="./images/tournaments.png"
-                style="width:100%; max-height:800px; object-fit:cover;">
-                <h2 >TOURNAMENTS</h2>
-                <p ><span class="highlight">February 2025</span></p>
-                <button class="btn-phase" onclick="window.location.href='tournaments.html';" >SEE MORE</button>
+            <h1>DISCOVER WHAT'S ON</h1>
+            <p style="text-align: center;">Experience it all at APLK - Discover your perfect spot to play, watch or eat. At APLK, there is something for
+                everyone to enjoy!</p>
+            <div class="events" id="events-section">
+                <div class="event">
+                    <img src="./images/n1.png" alt=""
+                    style="width:100%; max-height:300px; object-fit:cover;  ">
+                    <h2>APLK x Call of Duty: Community Scrims</h2>
+                    <p>Join APLK's Call of Duty community scrims! Whether you're a beginner or a seasoned player, this is your chance to showcase your skills, meet fellow gamers, and improve your gameplay. Open to all APLK members and friends. Let's dominate the battlefield together!</p>
+                    <p><strong>Date:</strong> March 15, 2025</p>
+                    <p><strong>Time:</strong> 6:00 PM - 10:00 PM</p>
+                    <p><strong>Platform:</strong> Cellphone</p>
+                </div>
+                
+                <div class="event">
+                    <img src="./images/n2.png" alt=""
+                    style="width:100%; max-height:300px; object-fit:cover;">
+                    <h2>Tekken 8 Mentorship Program</h2>
+                    <p>APLK is launching a Tekken 8 mentorship program! Learn from the best players in the community, improve your combos, and master advanced techniques. Whether you're new to Tekken or looking to refine your skills, this program is for you. Sign up now and level up your game!</p>
+                    <p><strong>Registration Deadline:</strong> March 10, 2025</p>
+                    <p><strong>Program Starts:</strong> March 20, 2025</p>
+                </div>
+                
+                <div class="event">
+                    <img src="./images/n3.png" alt=""
+                    style="width:100%; max-height:300px; object-fit:cover;">
+                    <h2>Valorant Practice Sessions</h2>
+                    <p>Calling all Valorant enthusiasts! APLK is hosting weekly practice sessions to help you sharpen your aim, teamwork, and strategy. Whether you're preparing for a tournament or just want to have fun, these sessions are perfect for you. Don't miss out!</p>
+                    <p><strong>Every Saturday</strong></p>
+                    <p><strong>Time:</strong> 3:00 PM - 7:00 PM</p>
+                    <p><strong>Platform:</strong> PC</p>
+                </div>
             </div>
-        </div>
-        <h1>DISCOVER WHAT'S ON</h1>
-        <p style="text-align: center;">Experience it all at APLK - Discover your perfect spot to play, watch or eat. At APLK, there is something for
-            everyone to enjoy!</p>
-        <div class="events" id="events-section">
-            <div class="event">
-                <img src="./images/n1.png" alt=""
-                style="width:100%; max-height:300px; object-fit:cover;  ">
-                <h2>APLK x Call of Duty: Community Scrims</h2>
-                <p>Join APLK's Call of Duty community scrims! Whether you're a beginner or a seasoned player, this is your chance to showcase your skills, meet fellow gamers, and improve your gameplay. Open to all APLK members and friends. Let's dominate the battlefield together!</p>
-                <p><strong>Date:</strong> March 15, 2025</p>
-                <p><strong>Time:</strong> 6:00 PM - 10:00 PM</p>
-                <p><strong>Platform:</strong> Cellphone</p>
+            <div class="events">
+                <div class="event">
+                    <img src="./images/n4.png" alt=""
+                    style="width:100%; max-height:300px; object-fit:cover;">
+                    <h2>APLK Esports Bootcamp</h2>
+                    <p>Join APLK's Esports Bootcamp! This intensive program covers everything from game mechanics to mental preparation. Open to players of Call of Duty, Tekken, and Valorant. Learn from experienced coaches, participate in scrims, and prepare for competitive play. Limited slots available!</p>
+                    <p><strong>Bootcamp Dates:</strong> April 1-5, 2025</p>
+                    <p><strong>Location:</strong> APLK Esports Hub, Manila</p>
+                </div>
+                
+                <div class="event">
+                    <img src="./images/n5.png" alt=""
+                    style="width:100%; max-height:300px; object-fit:cover;">
+                    <h2>APLK Valorant Tournament</h2>
+                    <p>Compete in APLK's Valorant Tournament and win exciting prizes! Gather your team and showcase your skills in this thrilling competition. Open to all APLK members and friends. Register now and prove you're the best!</p>
+                    <p><strong>Tournament Date:</strong> May 10, 2025</p>
+                    <p><strong>Registration Deadline:</strong> May 1, 2025</p>
+                </div>
+                
+                <div class="event">
+                    <img src="./images/n6.png" alt=""
+                    style="width:100%; max-height:300px; object-fit:cover;">
+                    <h2>Tekken Community Night</h2>
+                    <p>APLK is hosting a Tekken Community Night! Bring your controllers, meet fellow Tekken players, and enjoy friendly matches. Whether you're a casual player or a competitive fighter, this event is for you. Let's make it a night to remember!</p>
+                    <p><strong>Date:</strong> April 25, 2025</p>
+                    <p><strong>Time:</strong> 5:00 PM - 9:00 PM</p>
+                    <p><strong>Location:</strong> APLK Gaming Lounge</p>
+                </div>
             </div>
-            
-            <div class="event">
-                <img src="./images/n2.png" alt=""
-                style="width:100%; max-height:300px; object-fit:cover;">
-                <h2>Tekken 8 Mentorship Program</h2>
-                <p>APLK is launching a Tekken 8 mentorship program! Learn from the best players in the community, improve your combos, and master advanced techniques. Whether you're new to Tekken or looking to refine your skills, this program is for you. Sign up now and level up your game!</p>
-                <p><strong>Registration Deadline:</strong> March 10, 2025</p>
-                <p><strong>Program Starts:</strong> March 20, 2025</p>
-            </div>
-            
-            <div class="event">
-                <img src="./images/n3.png" alt=""
-                style="width:100%; max-height:300px; object-fit:cover;">
-                <h2>Valorant Practice Sessions</h2>
-                <p>Calling all Valorant enthusiasts! APLK is hosting weekly practice sessions to help you sharpen your aim, teamwork, and strategy. Whether you're preparing for a tournament or just want to have fun, these sessions are perfect for you. Don't miss out!</p>
-                <p><strong>Every Saturday</strong></p>
-                <p><strong>Time:</strong> 3:00 PM - 7:00 PM</p>
-                <p><strong>Platform:</strong> PC</p>
-            </div>
-        </div>
-        <div class="events">
-            <div class="event">
-                <img src="./images/n4.png" alt=""
-                style="width:100%; max-height:300px; object-fit:cover;">
-                <h2>APLK Esports Bootcamp</h2>
-                <p>Join APLK's Esports Bootcamp! This intensive program covers everything from game mechanics to mental preparation. Open to players of Call of Duty, Tekken, and Valorant. Learn from experienced coaches, participate in scrims, and prepare for competitive play. Limited slots available!</p>
-                <p><strong>Bootcamp Dates:</strong> April 1-5, 2025</p>
-                <p><strong>Location:</strong> APLK Esports Hub, Manila</p>
-            </div>
-            
-            <div class="event">
-                <img src="./images/n5.png" alt=""
-                style="width:100%; max-height:300px; object-fit:cover;">
-                <h2>APLK Valorant Tournament</h2>
-                <p>Compete in APLK's Valorant Tournament and win exciting prizes! Gather your team and showcase your skills in this thrilling competition. Open to all APLK members and friends. Register now and prove you're the best!</p>
-                <p><strong>Tournament Date:</strong> May 10, 2025</p>
-                <p><strong>Registration Deadline:</strong> May 1, 2025</p>
-            </div>
-            
-            <div class="event">
-                <img src="./images/n6.png" alt=""
-                style="width:100%; max-height:300px; object-fit:cover;">
-                <h2>Tekken Community Night</h2>
-                <p>APLK is hosting a Tekken Community Night! Bring your controllers, meet fellow Tekken players, and enjoy friendly matches. Whether you're a casual player or a competitive fighter, this event is for you. Let's make it a night to remember!</p>
-                <p><strong>Date:</strong> April 25, 2025</p>
-                <p><strong>Time:</strong> 5:00 PM - 9:00 PM</p>
-                <p><strong>Location:</strong> APLK Gaming Lounge</p>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer id="contact">
         <h2 class=" footer">CONTACT US</h2>
