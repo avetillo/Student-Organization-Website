@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Game Page</title>
+    <title>APLK ESPORTS: Games</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/officers/logo.png">
+    
     <style>
         :root{
             --c-dark: #1b1b16;
@@ -80,39 +83,11 @@
         .container {
             display: flex;
             justify-content: center;
-            gap: 20px; /* Adjust the gap to set the margin between phases */
-            flex-wrap: wrap; /* Allows wrapping to the next line if the screen is too narrow */
+            gap: 20px; 
+            flex-wrap: wrap; 
             padding: 20px;
         }
-
-        .event {
-            background-color: #292929;
-            border: none;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 310px;
-        }
-
-        .event h2 {
-            color: var(--c-secondary-light);
-            margin-top: 0;
-            text-align:  center;
-        }
-
-        .event p {
-            color:var(--c-white);
-            text-align: left;
-            margin: 10px 0;
-        }
-
-        .events {
-            display: flex;
-            justify-content: space-between;
-            border: none;
-        }
-    
+   
 
         .btn-phase {
             background-color: #292929;
@@ -131,9 +106,9 @@
         }
 
         .image {
-            width: 100%; /* Make the image fit the entire width of the phase */
-            height: 100%; /* Maintain aspect ratio */
-            object-fit: cover; /* Cover the phase without distortion */
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
             transition: opacity 0.3s ease;
             position: absolute;
             top: 0;
@@ -143,8 +118,8 @@
 
         .phase {
             position: relative;
-            width: 310px;  /* Adjust to match your layout */
-            height: 388px; /* Maintain 4:5 aspect ratio (1080x1350) */
+            width: 310px;
+            height: 388px;
             overflow: hidden;
         }
 
@@ -175,7 +150,7 @@
             cursor: pointer;
             opacity: 0;
             transition: opacity 0.3s ease, transform 0.2s ease;
-            z-index: 2; /* Make sure it appears above images */
+            z-index: 2;
         }
 
         .phase:hover .hover-btn {
@@ -184,15 +159,200 @@
 
         .hover-btn:hover {
             background-color: var(--c-secondary-light);
-            transform: translateX(-50%) scale(1.05); /* Combine both transformations */
+            transform: translateX(-50%) scale(1.05);
         }
         
-    </style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        body {
+            background: linear-gradient(90deg, #292929, #1e1e1e);
+        }
+
+        header {
+            background-color: #400001;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 300px;
+            box-shadow: 0px 8px 1px #000;
+        }
+
+        nav {
+            width: 100%;
+            background: #540103; 
+            padding: 15px 20px;
+            color: #F2C85B;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            font-size: 13pt;
+        }
+
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+            margin-left: 0;
+        }
 
     
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #F2C85B;
+        }
+
+        .nav-links li a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+
+        footer {
+            width: 100%;
+            background: #333231;
+            color: #F2C85B;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            font-size: 24px;
+            color: #F2C85B;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .logo img{
+            height: 100px;
+            width: auto;
+        }
+
+        .header-menu button {
+            background-color: #400001;
+            font-family: 'Roboto', sans-serif;
+            color: #f2c85b;
+            padding: 10px 10px 10px 40px;
+            border: none;
+            cursor: pointer;
+            font-size: 15pt;
+            font-weight: bold;
+        }
+
+        button {
+            background: linear-gradient(90deg, #ba0001, #7c0000);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px #400001;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #ff1a1a, #cc0000);
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px #a80003;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        
+        .announcement-thumbnail img {
+            width: 100%;
+        }
+
+        .application {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .application .game-collage {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 100px;
+        }
+
+        .application .game-collage img {
+            height: auto;
+            width: 150px;
+        }
+    </style>
+
+    <link rel = "icon"  type = "" href = "">
 </head>
 
 <body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Apolaki Logo" width="80" height="80">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/homepage/aplk_homepage.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+                <li><a href="/about/aplk_about.html"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
+                <li><a href="/events/eventshome.html"><i class="fa-solid fa-calendar"></i> EVENTS </a></li>
+                <li><a href="/officers/aplk_officers.html"><i class="fa-solid fa-users"></i> OFFICERS</a></li>
+                <li><a href="#games"><i class="fa-solid fa-gamepad"></i> GAMES</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-phone"></i> CONTACT </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class = "announcement-thumbnail">
+        <img src  = "./images/game-thumbnail.gif">
+    </section>
+
     <div class="container">
         <div class="phase">
             <img src="./images/league.png" class="image default">
@@ -218,6 +378,34 @@
             <button class="hover-btn" onclick="window.location.href='codm.html';">More Details</button>
         </div>
     </div>
+
+    <footer id="contact">
+        <h2>CONTACT US</h2>
+        <br>
+            <p>
+                <a href="mailto:" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://ph.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                
+            </p>
+            <br>
+            <br>
+            <div style="font-size: 15px; color: #F2C85B; font-family: 'Roboto', sans-serif; font-style: italic;">
+                &copy; 2025 APLK (Apolaki) Esports Club. All rights reserved.
+            </div>
+    </footer>
 </body>
 
 
