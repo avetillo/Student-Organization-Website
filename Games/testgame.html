@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Game Page</title>
+    <style>
+        :root{
+            --c-dark: #1b1b16;
+            --c-darker: #11110e;
+            --c-brand: #400001;
+            --c-brand-light: #FFA200;
+            --c-secondary-light: #F2C85B;
+            --c-brand-rgb: 78, 87, 212;
+            --c-body: #727272;
+            --c-white: #dbdbdb;
+            --c-grey: #dbd9d9f1 ;
+            --font-base: Helvetica, sans-serif;
+            --box-shadow: 0px 15px 25px rgba( 0, 0, 0, 0, 0.8);
+            --transition: all 0.5s ease;
+        }
+
+        html {
+        scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1b1b16;
+            color: #dbdbdb;
+        }
+
+        h1 {
+            color: #FFA200;
+            text-align: center;
+        }
+
+        h2 {
+            color: #FFA200;
+            border-bottom: 2px solid #FFA200;
+            padding-bottom: 10px;
+        }
+
+        .phase {
+            background-color: var(--c-darker);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 310px;
+            align-items: center; 
+            text-align: center;
+        }
+        .phase:hover{
+            background-color: var(--c-brand);
+            transform: scale(1.05);
+        }
+
+        .phase h3 {
+            color: #666;
+        }
+
+        .phase p {
+            margin: 10px 0;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .highlight {
+            color: #dbdbdb;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Adjust the gap to set the margin between phases */
+            flex-wrap: wrap; /* Allows wrapping to the next line if the screen is too narrow */
+            padding: 20px;
+        }
+
+        .event {
+            background-color: #292929;
+            border: none;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 310px;
+        }
+
+        .event h2 {
+            color: var(--c-secondary-light);
+            margin-top: 0;
+            text-align:  center;
+        }
+
+        .event p {
+            color:var(--c-white);
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .events {
+            display: flex;
+            justify-content: space-between;
+            border: none;
+        }
+    
+
+        .btn-phase {
+            background-color: #292929;
+            color: var(--c-brand-light);
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-phase:hover{
+            background-color: var(--c-brand-light); 
+            color: var(--c-dark);
+            transform: scale(1.05);
+        }
+
+        .image {
+            width: 100%; /* Make the image fit the entire width of the phase */
+            height: 100%; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the phase without distortion */
+            transition: opacity 0.3s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+        }
+
+        .phase {
+            position: relative;
+            width: 310px;  /* Adjust to match your layout */
+            height: 388px; /* Maintain 4:5 aspect ratio (1080x1350) */
+            overflow: hidden;
+        }
+
+        .image.hover {
+            opacity: 0;
+        }
+
+        .phase:hover .image.hover {
+            opacity: 1;
+        }
+
+        .phase:hover .image.default {
+            opacity: 0;
+        }
+
+        .hover-btn {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--c-brand-light);
+            color: #460702;
+            border: none;
+            border-radius: 12px;
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            z-index: 2; /* Make sure it appears above images */
+        }
+
+        .phase:hover .hover-btn {
+            opacity: 1;
+        }
+
+        .hover-btn:hover {
+            background-color: var(--c-secondary-light);
+            transform: translateX(-50%) scale(1.05); /* Combine both transformations */
+        }
+        
+    </style>
+
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="phase">
+            <img src="./images/league.png" class="image default">
+            <img src="./images/h-league.png" class="image hover">
+            <button class="hover-btn" onclick="window.location.href='league.html';">More Details</button>
+        </div>
+
+        <div class="phase">
+            <img src="./images/valorant.png" class="image default">
+            <img src="./images/h-valorant.png" class="image hover">
+            <button class="hover-btn" onclick="window.location.href='valorant.html';">More Details</button>
+        </div>
+
+        <div class="phase">
+            <img src="./images/tekken8.png" class="image default">
+            <img src="./images/h-tekken8.png" class="image hover">
+            <button class="hover-btn" onclick="window.location.href='tekken8.html';">More Details</button>
+        </div>
+
+        <div class="phase">
+            <img src="./images/codm.png" class="image default">
+            <img src="./images/h-codm.png" class="image hover">
+            <button class="hover-btn" onclick="window.location.href='codm.html';">More Details</button>
+        </div>
+    </div>
+</body>
+
+
+</html>
