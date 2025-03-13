@@ -8,7 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
     
     <style>
-
+        html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         :root{
             --c-dark: #1b1b16;
             --c-darker: #292929;
@@ -19,16 +23,16 @@
             --c-body: #727272;
             --c-white: #dbdbdb;
             --c-grey: #dbd9d9f1 ;
-            --font-base: Helvetica, sans-serif;
+            --font-base: Roboto, sans-serif;
             --box-shadow: 0px 15px 25px rgba( 0, 0, 0, 0, 0.8);
             --transition: all 0.5s ease;
         }
         body {
             font-family: Roboto, sans-serif;
             line-height: 1.6;
-            margin: 20px;
             background-color: var(--c-dark);
-            color: var(--c-white)
+            color: var(--c-white);
+            margin: 0;
         }
         h1 {
             color: var(--c-brand-light);
@@ -86,6 +90,7 @@
         .btn-section{
             text-align: center;
             margin-top: 20px;
+            margin-bottom: 30px;
         }
 
         nav {
@@ -177,24 +182,27 @@
         }
 
     </style>
+    
 </head>
-<body>
+ 
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="./images/logo1.png" alt="Apolaki Logo" width="80" height="80">
+
+<body>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./images/logo1.png" alt="Apolaki Logo" width="80" height="80">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/homepage/aplk_homepage.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+                    <li><a href="/about/aplk_about.html"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
+                    <li><a href="/events/eventshome.html"><i class="fa-solid fa-calendar"></i> EVENTS </a></li>
+                    <li><a href="/officers/aplk_officers.html"><i class="fa-solid fa-users"></i> OFFICERS</a></li>
+                    <li><a href="#games"><i class="fa-solid fa-gamepad"></i> GAMES</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-phone"></i> CONTACT </a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home"><i class="fa-solid fa-house"></i> HOME</a></li>
-                <li><a href="#about"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
-                <li><a href="#events"><i class="fa-solid fa-calendar"></i> EVENTS </a></li>
-                <li><a href="#officers"><i class="fa-solid fa-users"></i> OFFICERS</a></li>
-                <li><a href="#games"><i class="fa-solid fa-gamepad"></i> GAMES</a></li>
-                <li><a href="#contact"><i class="fa-solid fa-phone"></i> CONTACT </a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
     <div class="container">
     <h1>HOW DOES THE APPLICATION PROCESS WORK?</h1>
