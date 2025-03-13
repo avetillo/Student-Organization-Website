@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events Page</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo1.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
     <style>
         :root{
             --c-dark: #1b1b16;
@@ -126,6 +128,86 @@
             transform: scale(1.05);
         }
         
+        nav {
+            width: 100%;
+            background: #540103; 
+            padding: 15px 20px;
+            color: #F2C85B;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            font-size: 13pt;
+        }
+
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+            margin-left: 0;
+        }
+
+       
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #F2C85B;
+        }
+
+        .nav-links li a:hover {
+            color: white;
+        }
+
+        footer {
+            width: 100%;
+            background: #333231;
+            color: #F2C85B;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            font-size: 24px;
+            color: #F2C85B;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
         
     </style>
 
@@ -133,8 +215,23 @@
 </head>
 
 
-
 <body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./images/logo1.png" alt="Apolaki Logo" width="80" height="80">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fa-solid fa-house"></i> HOME</a></li>
+                <li><a href="#about"><i class="fa-solid fa-circle-info"></i> ABOUT US</a></li>
+                <li><a href="#events"><i class="fa-solid fa-calendar"></i> EVENTS </a></li>
+                <li><a href="#officers"><i class="fa-solid fa-users"></i> OFFICERS</a></li>
+                <li><a href="#games"><i class="fa-solid fa-gamepad"></i> GAMES</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-phone"></i> CONTACT </a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <h1>EVENTS</h1>
         <div class="card">
