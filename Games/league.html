@@ -64,11 +64,36 @@
             color: white;
         }
 
+        h1 {
+            font-size: 25pt;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: #F2C85B;
+        }
+
         header {
             width: 100%;
             background: #400001;
             color: #F2C85B;
             text-align: center;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .gameheader-container {
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 100%;
         }
 
         main {
@@ -171,16 +196,17 @@
             </ul>
         </div>
     </nav>
+
     <header>
-        <div style="text-align: center;">
-            <img src="images/lol_header.gif" alt="header title" style="width: 100%; max-width: 100%;">
+        <div class="gameheader-container">
+            <img class="header-image" src="images/lol_header.gif" alt="header title">
         </div>
     </header>
     
     <main>
         <section id="players">
             <br>
-            <p style="text-align: center; font-size: 25pt;"><b>PLAYERS</b></p>
+            <h1 class="section-title">PLAYERS</h1>
             <div class="card-container">
                 <div class="card">
                     <img src="/games/images/People/lol_top.png" alt="Player 1">
@@ -216,7 +242,7 @@
 
         <section id="subs_coaches">
             <br>
-            <p style="text-align: center; font-size: 25pt;"><b>SUBS/COACHES</b></p>
+            <h1 class="section-title">SUBS/COACHES</h1>
             <div class="card-container">
                 <div class="card">
                     <img src="/games/images/People/lol_sub1.png" alt="Sub 1">
