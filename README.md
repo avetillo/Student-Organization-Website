@@ -1,5 +1,17 @@
-﻿# Student Organization Website
- 
-**APOLAKI** is a student organization website project that showcases the use of the three main CSS styling methods: inline, internal, and external. This is a refined version of a previous group collaboration, now enhanced with various CSS selectors such as the universal selector (*), type selector, class selector (.classname), and ID selector (#idname). Each webpage also demonstrates the use of the CSS box model, applying margin, border, padding, and content adjustments to create a well-structured and visually appealing layout.
+# APLK (Apolaki): Rule the Game, Command the Battlefield
 
-Website Link : https://student-organization-website.netlify.app/
+**APLK (Apolaki): Rule the Game, Command the Battlefield** is a student e-sports club website designed to showcase a dynamic and competitive online presence for an organization focused on gaming and digital events. Developed as an enhanced version of a previous group collaboration, the project highlights modern web design principles using various CSS techniques and selector types to improve structure, layout, and user interaction.
+
+## 🌐 Website Link  
+👉 [Visit the Live Site](https://student-organization-website.netlify.app/)
+
+## Features
+- Utilizes all three CSS styling methods: **inline**, **internal**, and **external**
+- Enhanced with CSS selectors:
+  - **Universal selector** (`*`)
+  - **Type selector**
+  - **Class selector** (`.classname`)
+  - **ID selector** (`#idname`)
+- Implements the **CSS box model** (margin, border, padding, and content)
+- Improved layout and design for a clean, engaging interface
+- Designed for a student organization with a focus on e-sports and gaming events
